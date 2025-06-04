@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://alosistemas.com',
+    site: 'https://alosistemas.com/',
     base: 'alosistemaslanding',
 });
