@@ -573,6 +573,114 @@
 					</section>
 					<!-- offer__section end -->
 
+					<!-- ai_services__section start -->
+					<section class="ai__services__section position-relative pb-100 pb-lg-40 pt-80 pt-lg-40">
+						<div class="container aos-init" data-aos="fade-up">
+							<div class="section__title mb-60">
+								<div class="text-start text-lg-center">
+									<h5 class="section__sub__title">
+										SERVICIOS DE INTELIGENCIA ARTIFICIAL
+									</h5>
+									<div class="row">
+										<div class="col-xl-7 col-lg-8 m-auto">
+											<h2 class="section__title__main">
+												Impulsamos tu negocio con IA y capacitación
+											</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-center">
+								<div class="col-xxl-4 col-xl-6 col-lg-6">
+									<div class="single__offer__box service-box-clickable" data-service="talleres-ia">
+										<div class="icon mb-30">
+											<img
+												class="icon-front"
+												src=`https://alosistemas.com/image/offer__icon__02.svg`
+												alt="icon"
+												style="max-width: 50px; height: auto;"
+											/>
+										</div>
+										<div class="offer__name">
+											<h4 class="offer__title mb-20">
+												<a href="javascript:void(0);">
+													Talleres de IA
+												</a>
+											</h4>
+											<p class="mb-30">
+												Aprende a implementar soluciones de inteligencia artificial en tu empresa con talleres prácticos y personalizados.
+											</p>
+											<a href="javascript:void(0);" class="ht_btn">
+												<span>Explorar</span><i class="fa-solid fa-chevron-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-4 col-xl-6 col-lg-6">
+									<div class="single__offer__box service-box-clickable" data-service="capacitaciones">
+										<div class="icon mb-30">
+											<img
+												class="icon-front"
+												src=`https://alosistemas.com/image/code-square.png`
+												alt="icon"
+												style="max-width: 50px; height: auto;"
+											/>
+										</div>
+										<div class="offer__name">
+											<h4 class="offer__title mb-20">
+												<a href="javascript:void(0);">
+													Capacitaciones Empresariales
+												</a>
+											</h4>
+											<p class="mb-30">
+												Formamos a tu equipo en las últimas tecnologías y metodologías para maximizar el rendimiento y la productividad.
+											</p>
+											<a href="javascript:void(0);" class="ht_btn">
+												<span>Explorar</span><i class="fa-solid fa-chevron-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-4 col-xl-6 col-lg-6">
+									<div class="single__offer__box service-box-clickable" data-service="consultoria-ia">
+										<div class="icon mb-30">
+											<img
+												class="icon-front"
+												src=`https://alosistemas.com/image/offer__icon__03.png`
+												alt="icon"
+												style="max-width: 50px; height: auto;"
+											/>
+										</div>
+										<div class="offer__name">
+											<h4 class="offer__title mb-20">
+												<a href="javascript:void(0);">
+													Consultoría en IA
+												</a>
+											</h4>
+											<p class="mb-30">
+												Diseñamos estrategias personalizadas de IA para optimizar procesos y generar valor en tu organización.
+											</p>
+											<a href="javascript:void(0);" class="ht_btn">
+												<span>Explorar</span><i class="fa-solid fa-chevron-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<img
+							src=`https://alosistemas.com/image/offer_bg__01.png`
+							alt=""
+							class="shapes offer_bg__01"
+						/>
+						<img
+							src=`https://alosistemas.com/image/offer_bg__02.png`
+							alt=""
+							class="shapes offer_bg__02"
+						/>
+					</section>
+					<!-- ai_services__section end -->
+
 					<!-- choose__section start-->
 					<section
 						class="choose__section position-relative pb-60 pb-lg-40"
@@ -1791,6 +1899,119 @@
 
 			<!--Custom JS here -->
 			<script src=`https://alosistemas.com/js/main.js` is:inline></script>
+
+			<!-- Modal para servicios de IA -->
+			<div id="serviceModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+				<div style="background-color: #fefefe; margin: 5% auto; padding: 40px; border: 1px solid #888; width: 90%; max-width: 700px; border-radius: 15px; position: relative;">
+					<span id="closeModal" style="color: #aaa; float: right; font-size: 35px; font-weight: bold; cursor: pointer; line-height: 20px;">&times;</span>
+					<div id="modalContent"></div>
+				</div>
+			</div>
+
+			<script is:inline>
+				document.addEventListener('DOMContentLoaded', function() {
+					const modal = document.getElementById('serviceModal');
+					const closeBtn = document.getElementById('closeModal');
+					const modalContent = document.getElementById('modalContent');
+
+					const serviceInfo = {
+						'talleres-ia': {
+							title: 'Talleres de IA - ALO IA',
+							content: `
+								<h3 style="color: #FC3C59; margin-bottom: 20px;">¿Qué es ALO IA?</h3>
+								<p style="margin-bottom: 15px; line-height: 1.8;">ALO IA es nuestra división especializada en Inteligencia Artificial, diseñada para transformar la manera en que tu empresa opera mediante soluciones innovadoras de IA.</p>
+
+								<h4 style="color: #333; margin-top: 25px; margin-bottom: 15px;">Talleres de IA</h4>
+								<p style="margin-bottom: 15px; line-height: 1.8;">Nuestros talleres prácticos te enseñan a implementar soluciones de inteligencia artificial en tu empresa:</p>
+								<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
+									<li>Introducción práctica a ChatGPT y modelos de lenguaje</li>
+									<li>Automatización de procesos con IA</li>
+									<li>Análisis de datos con Machine Learning</li>
+									<li>Implementación de chatbots inteligentes</li>
+									<li>IA Generativa aplicada a tu negocio</li>
+								</ul>
+								<p style="margin-top: 20px; font-weight: bold; color: #FC3C59;">Duración: Talleres de 4 a 8 horas | Modalidad: Presencial u Online</p>
+							`
+						},
+						'capacitaciones': {
+							title: 'Capacitaciones Empresariales - ALO IA',
+							content: `
+								<h3 style="color: #FC3C59; margin-bottom: 20px;">¿Qué es ALO IA?</h3>
+								<p style="margin-bottom: 15px; line-height: 1.8;">ALO IA es nuestra división especializada en Inteligencia Artificial, creada para impulsar la transformación digital de tu empresa con tecnología de vanguardia.</p>
+
+								<h4 style="color: #333; margin-top: 25px; margin-bottom: 15px;">Capacitaciones Empresariales</h4>
+								<p style="margin-bottom: 15px; line-height: 1.8;">Formamos a tu equipo en las últimas tecnologías:</p>
+								<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
+									<li>Programas personalizados según necesidades empresariales</li>
+									<li>Capacitación en herramientas de IA para productividad</li>
+									<li>Metodologías ágiles con IA</li>
+									<li>Ética y responsabilidad en el uso de IA</li>
+									<li>Estrategias de adopción de IA en la empresa</li>
+								</ul>
+								<p style="margin-top: 20px; font-weight: bold; color: #FC3C59;">Programas a medida | Certificación incluida</p>
+							`
+						},
+						'consultoria-ia': {
+							title: 'Consultoría en IA - ALO IA',
+							content: `
+								<h3 style="color: #FC3C59; margin-bottom: 20px;">¿Qué es ALO IA?</h3>
+								<p style="margin-bottom: 15px; line-height: 1.8;">ALO IA es la división de ALOSISTEMAS enfocada en desarrollar e implementar soluciones de Inteligencia Artificial que generen valor real en tu organización.</p>
+
+								<h4 style="color: #333; margin-top: 25px; margin-bottom: 15px;">Consultoría en IA</h4>
+								<p style="margin-bottom: 15px; line-height: 1.8;">Diseñamos estrategias personalizadas de IA para optimizar tus procesos:</p>
+								<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
+									<li>Análisis de oportunidades de IA en tu empresa</li>
+									<li>Diseño de roadmap de implementación de IA</li>
+									<li>Desarrollo de soluciones personalizadas</li>
+									<li>Integración de IA con sistemas existentes</li>
+									<li>Optimización de procesos mediante IA</li>
+									<li>Acompañamiento en la transformación digital</li>
+								</ul>
+								<p style="margin-top: 20px; font-weight: bold; color: #FC3C59;">Consultoría estratégica | ROI garantizado</p>
+							`
+						}
+					};
+
+					// Agregar event listeners a todas las cajas de servicio
+					const serviceBoxes = document.querySelectorAll('.service-box-clickable');
+					serviceBoxes.forEach(box => {
+						box.style.cursor = 'pointer';
+						box.addEventListener('click', function(e) {
+							e.preventDefault();
+							const serviceType = this.getAttribute('data-service');
+							const info = serviceInfo[serviceType];
+
+							if (info) {
+								modalContent.innerHTML = '<h2 style="color: #FC3C59; margin-bottom: 25px;">' + info.title + '</h2>' + info.content;
+								modal.style.display = 'block';
+								document.body.style.overflow = 'hidden';
+							}
+						});
+					});
+
+					// Cerrar modal
+					closeBtn.addEventListener('click', function() {
+						modal.style.display = 'none';
+						document.body.style.overflow = 'auto';
+					});
+
+					// Cerrar al hacer clic fuera del modal
+					window.addEventListener('click', function(event) {
+						if (event.target == modal) {
+							modal.style.display = 'none';
+							document.body.style.overflow = 'auto';
+						}
+					});
+
+					// Cerrar con tecla ESC
+					document.addEventListener('keydown', function(event) {
+						if (event.key === 'Escape' && modal.style.display === 'block') {
+							modal.style.display = 'none';
+							document.body.style.overflow = 'auto';
+						}
+					});
+				});
+			</script>
 		</div>
 	</body>
 </html>
